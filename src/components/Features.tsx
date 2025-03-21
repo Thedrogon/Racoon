@@ -1,36 +1,44 @@
-// src/components/Features.tsx
-//import React from 'react';
+import React from 'react';
+import { motion } from 'framer-motion';
 
-const Features = () => {
+const Features: React.FC = () => {
   const features = [
-    {
-      title: "LeetCode Tracker",
-      description: "Track your LeetCode problems with ease.",
-    },
-    {
-      title: "Project Manager",
-      description: "Organize your projects with tasks and deadlines.",
-    },
-    { title: "Notes", description: "Store and manage your notes easily." },
-    {
-      title: "Code Contests",
-      description: "Track your performance in code contests.",
-    },
-    {
-      title: "Flexible Task Manager",
-      description: "Create custom task types to fit your needs.",
-    },
+    { title: 'LeetCode Tracker', description: 'Track your coding problems effortlessly.' },
+    { title: 'Project Manager', description: 'Organize tasks and deadlines with ease.' },
+    { title: 'Notes', description: 'Capture and manage your ideas.' },
+    { title: 'Code Contests', description: 'Monitor your competitive coding journey.' },
+    { title: 'Flexible Tasks', description: 'Customize tasks to fit your needs.' },
   ];
 
   return (
-    <section style={{ padding: '4rem 2rem' }}>
-      <h2 style={{ fontSize: '2rem', marginBottom: '2rem', textAlign: 'center' }}>Features</h2>
-      <div style={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap' }}>
+    <section className="features">
+      <motion.h2
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        Features
+      </motion.h2>
+      <div className="features-container">
         {features.map((feature, index) => (
-          <div key={index} style={{ backgroundColor: 'var(--surface)', padding: '2rem', margin: '1rem', borderRadius: '8px', width: '300px' }}>
-            <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>{feature.title}</h3>
-            <p style={{ color: 'var(--text-secondary)' }}>{feature.description}</p>
-          </div>
+          <motion.div
+            key={index}
+            className="feature-card"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1, duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <h3>
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" fill="var(--accent)" />
+                <path d="M10 15l-3-3 1.5-1.5L10 12l5-5 1.5 1.5L10 15z" fill="var(--text-primary)" />
+              </svg>
+              {feature.title}
+            </h3>
+            <p>{feature.description}</p>
+          </motion.div>
         ))}
       </div>
     </section>

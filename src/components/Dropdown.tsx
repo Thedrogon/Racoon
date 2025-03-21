@@ -13,7 +13,7 @@ const DropDown: React.FC<DropDownProps> = ({
   citySelection,
 }: DropDownProps): JSX.Element => {
   const [showDropDown, setShowDropDown] = useState<boolean>(false);
-  const [selectCity, setSelectCity] = useState<string>("");
+  //const [selectCity, setSelectCity] = useState<string>("");
 
   /**
    * Handle passing the city name

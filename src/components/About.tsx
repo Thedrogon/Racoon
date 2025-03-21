@@ -1,16 +1,20 @@
-// src/components/About.tsx
+import React from 'react';
+import { motion } from 'framer-motion';
 
-const About = () => {
+const About: React.FC = () => {
   return (
-    <section className="about">
-      <h2>About</h2>
+    <motion.section
+      className="about"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+    >
+      <h2>About Racoon AI</h2>
       <p>
-        Racoon is a personal project designed to streamline coding and task
-        management. It tracks LeetCode problems, projects, notes, coding contests
-        and offers a flexible task manager for custom needs like exams or daily
-        tasks.
+        Racoon AI is your smart assistant for tracking coding progress, projects, and tasks with a sleek, modern twist.
       </p>
-    </section>
+    </motion.section>
   );
 };
 
