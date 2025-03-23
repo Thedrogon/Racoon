@@ -1,25 +1,27 @@
-import React from 'react';
+
 import { Link as ScrollLink } from 'react-scroll';
 import { Link as RouterLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import 'remixicon/fonts/remixicon.css'
 
-const Header: React.FC = () => {
+const Header = () => {
   return (
     <motion.header
       className="header"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.3 }} // Shortened duration
     >
       <div className="logo">
-        
-        <div className="logo-text">Racoon AI</div>
+        <i className="logo-r ri-remix-run-fill"></i>
+        <p className="logo-text">acoon</p>
       </div>
       <nav className="nav">
-        <ScrollLink to="features" smooth={true} duration={500} className="nav-link">Features</ScrollLink>
-        <ScrollLink to="about" smooth={true} duration={500} className="nav-link">About</ScrollLink>
+        <div className="nav-link-p">
+          <ScrollLink to="features" smooth={true} duration={500} className="nav-link">Features</ScrollLink>
+          <ScrollLink to="about" smooth={true} duration={500} className="nav-link">About</ScrollLink>
+        </div>
         <RouterLink to="/login" className="btn btn-login">Login</RouterLink>
-        <RouterLink to="/signup" className="btn btn-signup">Sign Up</RouterLink>
       </nav>
     </motion.header>
   );
