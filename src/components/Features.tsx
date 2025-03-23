@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { memo } from 'react';
+import '../styles/Features.css';
 
 const FeatureCard = memo(({ title, description }: { title: string; description: string }) => (
   <motion.div
