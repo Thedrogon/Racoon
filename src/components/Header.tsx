@@ -3,11 +3,22 @@ import { Link as RouterLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import "remixicon/fonts/remixicon.css";
 import "../styles/Header.css";
+import { useEffect, useState } from "react";
 
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50); // Change background after 50px scroll
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll); // Cleanup
+  }, []);
   return (
     <motion.header
-      className="header"
+      className={`header ${isScrolled ? "header-scrolled" : ""}`} // Add class based on scroll
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.3 }} // Shortened duration
