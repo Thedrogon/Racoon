@@ -45,67 +45,16 @@ body::before {
 }
 
 /* Header */
-.header {
-  background: transparent;
-  padding: 2rem 4rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
- 
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap:-1rem;
-  cursor: pointer;
-}
 
-.logo-r{
-  font-size: 35px;
-  color: var(--accent-primary);
-  text-shadow: 0 0 10px rgba(255, 87, 34, 0.5);
-}
 
-.logo-text {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  text-shadow: 0 0 10px rgba(255, 87, 34, 0.5);
-  margin-left: 0.5rem;
-}
-
-.main{
+.hero-header{
   background: linear-gradient(to bottom, var(--dark-grey), var(--black));
   /*box-shadow: 15px 4px 12px rgba(0, 0, 0, 0.3); */ 
 }
 
 
-.nav {
-  display: flex;
-  gap: 1.5rem;
-}
 
-.nav-link {
-  color: var(--text-secondary);
-  font-size: 1.1rem;
-  transition: color 0.3s, transform 0.3s;
-  cursor: pointer;
-}
-
-.nav-link-p{
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.nav-link:hover {
-  color: var(--accent-primary);
-  transform: translateY(-2px);
-}
 
 .btn {
   padding: 0.75rem 1.5rem;
@@ -114,12 +63,6 @@ body::before {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.btn-login {
-  color: var(--text-primary);
-  border: 2px solid var(--accent);
-  box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4);
-  background: linear-gradient(45deg, var(--accent), #ff8a50);
-}
 
 .btn-signup {
   color: var(--text-primary);
@@ -132,7 +75,7 @@ body::before {
 
 /* Hero */
 .hero {
-  padding: 6rem 2rem;
+  padding: 7rem 4rem;
   background-image: url("/src/assets/vs-view.png");
   background-size: contain;
   background-position: right;
@@ -169,13 +112,7 @@ body::before {
   transform: scale(1.05);
 }
 
-.menu{
-  display: block;
-  color: var(--text-primary);
-  text-shadow: 0 0 15px rgba(255, 87, 34, 0.5);
-  font-size: 35px;
-  cursor: pointer;
-}
+
 
 /* Features */
 .features {

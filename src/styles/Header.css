@@ -1,0 +1,77 @@
+.left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header {
+  background: transparent;
+  padding: 1.8rem 4rem;
+  margin-bottom: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: -1rem;
+  cursor: pointer;
+}
+
+.logo-r {
+  font-size: 35px;
+  color: var(--accent-primary);
+  text-shadow: 0 0 10px rgba(255, 87, 34, 0.5);
+}
+
+.logo-text {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-shadow: 0 0 10px rgba(255, 87, 34, 0.5);
+  margin-left: 0.5rem;
+}
+
+.btn-login {
+  color: var(--text-primary);
+  border: 2px solid var(--accent);
+  box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4);
+  background: linear-gradient(45deg, var(--accent), #ff8a50);
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  transition: color 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+.nav-link-p {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-link:hover {
+  color: var(--accent-primary);
+  transform: translateY(-2px);
+}
+
+.menu-icon{
+    display: block;
+    color: var(--text-primary);
+    text-shadow: 0 0 15px rgba(255, 87, 34, 0.5);
+    font-size: 35px;
+    cursor: pointer;  /*to be done*/
+}

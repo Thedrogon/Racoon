@@ -10,7 +10,7 @@ import Footer from './Footer'
 const LandingPage = () => {
   return (
     <div style={{ backgroundColor: 'var(--background)', color: 'var(--text-primary)' }}>
-      <div className="main">
+      <div className="hero-header">
         <Header />
         <Hero />
       </div>
