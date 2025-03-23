@@ -12,12 +12,7 @@ const Header: React.FC = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="logo">
-        <svg width="40" height="40" viewBox="0 0 100 100">
-          <circle cx="50" cy="50" r="40" fill="var(--medium-grey)" />
-          <circle cx="35" cy="40" r="8" fill="var(--black)" />
-          <circle cx="65" cy="40" r="8" fill="var(--black)" />
-          <path d="M 40 65 Q 50 75 60 65" stroke="var(--light-grey)" strokeWidth="4" fill="none" />
-        </svg>
+        
         <div className="logo-text">Racoon AI</div>
       </div>
       <nav className="nav">
