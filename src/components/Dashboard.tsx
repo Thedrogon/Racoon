@@ -1,5 +1,4 @@
 // src/components/Dashboard.tsx
-import React from 'react';
 import { motion } from 'framer-motion';
 import '../styles/Dashboard.css'
 
@@ -10,7 +9,7 @@ interface Note { name: string; content: string; }
 interface Contest { name: string; platform: string; date: string; }
 interface Task { type: string; name: string; details?: string; }
 
-const Dashboard: React.FC = () => {
+const Dashboard = () => {
   // Mock data
   const leetCodeProblems: LeetCodeProblem[] = [
     { id: 1, name: 'Two Sum', difficulty: 'Easy' },
@@ -38,9 +37,12 @@ const Dashboard: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h1>Taskoon Dashboard</h1>
+        <h1>Dashboard</h1>
         <button className="btn-logout">Logout</button>
       </motion.header>
+      <div className="sidebar">
+        
+      </div>
       <div className="dashboard-grid">
         {/* LeetCode Section */}
         <motion.section

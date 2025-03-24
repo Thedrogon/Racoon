@@ -3,9 +3,9 @@
 
 
 .dashboard {
-    background: linear-gradient(135deg, #121212 0%, #1e1e1e 100%);
+    background: linear-gradient(to bottom, var(--black), var(--dark-grey));
     min-height: 100vh;
-    padding: 2rem;
+    padding: 3rem 4rem;
     position: relative;
     overflow: hidden;
   }
@@ -17,7 +17,6 @@
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(255, 87, 34, 0.1) 0%, transparent 70%);
     animation: glow 15s infinite alternate;
   }
   
@@ -42,7 +41,7 @@
   }
   
   .btn-logout {
-    background: linear-gradient(45deg, #ff5722, #ff8a50);
+    background: linear-gradient(45deg, var(--accent), var(--accent-primary));
     color: var(--text-primary);
     padding: 0.5rem 1.5rem;
     border: none;
@@ -95,7 +94,7 @@
     padding: 1rem;
     border-radius: 8px;
     margin-bottom: 1rem;
-    transition: background 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
   }
   
   .card:hover {

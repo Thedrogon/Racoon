@@ -1,11 +1,10 @@
 // src/components/Login.tsx
 //import { motion } from 'framer-motion';
-import React from 'react';
 //import { Link as RouterLink } from 'react-router-dom';
 
-const Login: React.FC = () => {
+const Login = () => {
   return (
-    <div style={{ padding: '2rem' }}>
+    <div className="login">
       Coming Soon . . . 
     </div>
   );

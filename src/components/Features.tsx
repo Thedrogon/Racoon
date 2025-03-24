@@ -13,7 +13,7 @@ const FeatureCard = memo(({ title, description }: { title: string; description: 
     <h3>
       <svg viewBox="0 0 24 24">
         <circle cx="12" cy="12" r="10" fill="var(--accent)" />
-        <path d="M10 15l-3-3 1.5-1.5L10 12l5-5 1.5 1.5L10 15z" fill="var(--text-primary)" />
+        <path d="M10 15l-3-3 1.5-1.5L10 12l5-5 1.5 1.5L10 15z" fill="var(--text-primary)" />   
       </svg>
       {title}
     </h3>
